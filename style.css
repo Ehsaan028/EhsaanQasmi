@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+.small{
+    font-size: 10px;
+    color: white;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(20px);
+}
+header .logo{
+    position: relative;
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2em;
+}
+header ul{
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+header li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: rgb(45, 188, 255);
+      font-weight: 500;
+    font-size: 1.2em;
+}
+header ul li.active a {
+    color: white;
+}
+header ul li a:hover{
+    color:white;
+}
+#Home{
+    position: relative;
+width: 100%;
+min-height: 100vh;
+background: black;
+display: flex;
+justify-content:space-between;
+align-items: center;
+padding: 100px;
+}
+#Home::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+right: 0;
+width: 50vw;
+height: 25vw;
+background:rgb(3, 136, 197);
+border-top-right-radius: 25vw;
+border-top-left-radius: 25vw;
+
+}
+#Home .content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 650px;
+    z-index: 10;
+}
+#Home .content h2{
+    position: relative;
+    font-size: 3em;
+    color: rgb(45, 188, 255);
+    font-family: 'Dancing Script', cursive;
+
+}
+#Home .content p{
+    position: relative;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    font-size: 1.25em;
+    max-width: 200px;
+    background: rgb(0, 38, 128);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 18px 30px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.btn:hover{
+    background: white;
+    color:rgb(0, 38, 128);
+border-radius:20px;
+transition: 0.5s ease;
+}
+#Home .Profile{
+position: absolute;
+bottom: 0;
+right: 0;
+max-height: 90vh;
+}
+#Services,
+#Projects,
+#Contact
+{
+    position: relative;
+    background: black;
+    min-height: 100vh;
+    padding: 120px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sectext{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sectext h2{
+    font-size: 2.6em;
+    color: white;
+}
+.sectext p{
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+#Services .secContent{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-gap: 20px;
+margin: 40px 0px;
+}
+#Services .secContent .box{
+    background:rgb(24, 59, 217);
+    padding: 50px 20px;
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border: 2px solid black;
+gap: 20px;
+}
+#Services .secContent .box:hover{
+    border: 5px solid blue;
+}
+#Services .secContent .box img{
+    max-width: 100px;
+    filter:invert(1);
+    opacity:0.6;
+transition: 0.6s;
+}
+
+#Services .secContent .box:hover img{
+    opacity: 1;
+}
+#Services .secContent .box h3{
+color: white;
+font-weight: 500;
+margin-top: 20px;
+}
+.seccenter {
+    width: 100%;
+    text-align: center;
+}
+#Projects{
+    background: black;
+    text-align: center;
+}
+#Projects .Pcontent{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+#Projects .Pcontent .imgbox{
+    position: relative;
+}
+#Projects .Pcontent .imgbox img{
+    max-width: 100%;
+}
+#Contact .Cont{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+#Contact .Cont a{
+    background:rgb(24, 59, 217);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    font-size: 1.2em;
+    color: white;
+    transition: 0.5s;
+}
+#Contact .Cont a:hover{
+    background:rgb(24, 59, 217);
+
+}
+#Contact .Cont a ion-icon{
+    color: rgb(241, 241, 244);
+    font-size: 1.5em;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+#Contact .Cont a:hover,
+#Contact .Cont a:hover ion-icon{
+    color: white;
+}
+.Ccenter{
+    width: 100%;
+    text-align: center;
+}
+.copyrights{
+    margin-top: 150px;
+    position: relative;
+    color: white;
+    font-size: 1.1em;
+}
+.copyrights a{
+    color: rgb(45, 188, 255);
+}
+
+@media (max-width:900px)
+{
+header{
+    padding: 20px 50px;
+}
+#Home{
+    padding: 150px 50px;
+    flex-direction: column;
+    padding-bottom:0;
+}
+#Home .content h2{
+    font-size: 2em;
+}
+.btn{
+    max-width: 160px;
+    padding: 10px 20px;
+}
+#Home .Profile{
+    position: fixed;
+    height: 50vh;
+    right: 0;
+}
+
+#Home .content p{
+    font-size: 10px;
+}
+.sectext h2{
+    font-size: 2em;
+    text-align: center;
+}
+#Services,
+#Projects,
+#Contact{
+    padding: 100px 50px 50px;
+}
+#Services .secContent,
+#Projects .Pcontent,
+#Contact .Cont{
+    grid-template-columns: repeat(2,1fr);
+}
+.menuToggle{
+    position: relative;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuToggle:before{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform:translateY(-10px);
+    transition: 0.5s;
+    box-shadow: 0 10px white;
+}
+.menuToggle::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform:translateY(10px);
+    transition: 0.5s;
+}
+header.active .menuToggle::before{
+transform: translateY(0px) rotate(45deg);
+box-shadow: 0 0px white;
+}
+header.active .menuToggle::after{
+    transform: translateY(0px) rotate(315deg);
+
+}
+header ul{
+
+    display: none;
+}
+header.active ul{
+    position: fixed;
+    left: 0;
+    top: 84px;
+    width: 100%;
+    height: calc(100vh - 84px);
+    background:rgba(50, 50, 50,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10000;
+    gap: 30px;
+}
+header.active ul li a{
+    font-size: 2em;
+}
+}
+@media (max-width:900px){
+    #Home .content h2{
+        font-size: 3em;
+    }
+    #Home::before{
+    
+    width:30vw;
+    height: 10vw;
+    background:rgb(3, 136, 197);
+    border-top-right-radius: 80vw;
+    border-top-left-radius: 80vw;
+    
+    }
+    #Home .Profile{
+        height:40vh;
+    }
+    #Services .secContent,
+#Projects .Pcontent,
+#Contact .Cont{
+    grid-template-columns: repeat(1,1fr);
+}
+#Contact .Cont a{
+    height: 80px;
+}
+}
